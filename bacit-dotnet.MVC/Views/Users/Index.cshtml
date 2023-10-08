@@ -4,19 +4,26 @@
 
     <form asp-action="save" asp-controller="users" method="post">
         <ul>
+
+            
             <li>
                 <label for="Name">Navn</label>
                 <input type="text" name="Name" value="@Model.Name" />
             </li>
-         
-            <li>
-                <label for="Email">Email</label>
-                <input type="email" name="Email" value="@Model.Email" />
-            </li>
+
+            <!--2 Neste linjer er sjekkboks for rolle i usersiden-->
         <li>
-            <label for="Role">Sett som administrator</label>
+            <label for="Role">Sett som Administrator</label>
                 <input asp-for="@Model.IsAdmin"/>
         </li>
+
+        <li>
+            <label for="Role">Sett som Mekaniker</label>
+            <input asp-for="@Model.IsAdmin" />
+        </li>
+
+        <!--Sjekkboks er de 2 linjene over:)-->
+
             <li>
                 <input type="submit" value="Lagre" />
             </li>

@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace bacit_dotnet.MVC.Controllers
 {
     //[Authorize]
+
+    
     public class UsersController : Controller
     {
         private readonly IUserRepository userRepository;
@@ -32,6 +34,11 @@ namespace bacit_dotnet.MVC.Controllers
                 }
             }
             return View(model);
+        }
+
+        public IActionResult Users()
+        {
+            return View();
         }
 
         [HttpPost]

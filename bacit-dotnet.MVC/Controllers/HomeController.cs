@@ -18,6 +18,13 @@ namespace bacit_dotnet.MVC.Controllers
         }
 
         [HttpGet]
+
+        //USER LINK
+        public IActionResult Users()
+        {
+            return View();
+        }
+        // USER LINK 
         public IActionResult Index()
         {
             _logger.LogInformation("Index method called");
